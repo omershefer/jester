@@ -1,0 +1,196 @@
+{
+  "title": "Real clients, real work,\n real feedback, ",
+  "title_bold": "Real success.",
+  "user_description": "Try hundreds of services from businesses and professionals for free!",
+  "provider_description": "You'll leave here with an impressive portfolio (to improve this)",
+  "signup": "Sign up for free",
+  "aboutus": "Who are we?",
+  "pricing": "Pricing",
+  "myAccount": "My account",
+  "termsAndConditions": "Terms and conditions",
+  "bioForServiceGiver": "We know how hard it can be to build a portfolio. \nEveryone started from the bottom.\nJoin Jester and find countless free clients to build a portfolio that will help you get your first paying clients.\nYou are building your future. Build it wisely.",
+  "expandSignupButtonLabel": "Join us",
+  "signupTitle": "Join us",
+  "email": "Email",
+  "password": "Password",
+  "passwordV": "Confirm Password",
+  "signupSubmit": "Sign up",
+  "loginTitle": "Login",
+  "expandLoginButtonLabel": "Login",
+  "loginSubmit": "Login",
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "pricing": "Pricing",
+    "accessibility": "Accessibility",
+    "terms": "Terms and Conditions",
+    "changeLangHebrew": "Change language to Hebrew",
+    "changeLangEnglish": "Change language to English",
+    "hebrew": "Hebrew",
+    "english": "English",
+    "navTo": "Navigate to the %{page} page",
+    "logoAlt": "Logo"
+  },
+  "accessibility": {
+    "headerLabel": "Top of page",
+    "title": "Accessibility Statement",
+    "updateDate": "The accessibility statement was updated on 6/3/25",
+    "intro": "Jester is a platform that enables building a portfolio. We work extensively to make our organization and website accessible to people with disabilities in order to promote equal rights and transparency for people with disabilities.",
+    "sectionAccessibleWebsite": "What is an accessible website",
+    "accessibleWebsiteDesc": "An accessible website is one that allows a person with a disability to browse with the same level of efficiency and enjoyment as other users, while using the capabilities of the system on which it operates and using assistive technologies for accessibility.",
+    "sectionModifications": "Implementation of accessibility adjustments on the website",
+    "modificationsDesc1": "Accessibility adjustments to the site were made in accordance with Section C: Internet Services in the Equal Rights for Persons with Disabilities Regulations (Service Accessibility Adjustments) 2013, the Israeli standard IS 5568 based on WCAG 2.0 guidelines, the site was made accessible to level AA and subject to changes and adjustments made in the Israeli standard document.",
+    "modificationsDesc2": "The site supports the use of assistive technologies such as screen reader software, browsing using the keyboard by using the Tab and Shift+Tab keys to navigate between links, arrow keys, Enter key for selection, and Esc key to exit.",
+    "modificationsDesc3": "The site is regularly checked to ensure the maintenance of site accessibility.",
+    "sectionBestPractices": "Optimal accessibility implementation on the website",
+    "bestPracticesDesc": "On this website, you can browse optimally and accessibly using popular browsers, and it is recommended to use the following browsers: Chrome, Edge, Firefox and screen reader software VoiceOver, Mozilla, JAWS.",
+    "sectionContact": "Ways to contact for requests, accessibility issues and suggestions for improvement",
+    "contactIntro": "If you find an accessibility issue on the website or need help, you are invited to contact us through the organization's accessibility coordinator:",
+    "contactName": "Omer Sheffer",
+    "contactPhone": "📞 050-5774708",
+    "contactEmailAddress": "Omersheffer01@gmail.com"
+  },
+  "footer": {
+    "jester": "Jester",
+    "description": "We connect beginning professionals with clients, enabling you to gain experience, build a real portfolio, and receive feedback quickly and efficiently.",
+    "social": {
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "whatsapp": "WhatsApp",
+      "phone": "Phone"
+    },
+    "nav": {
+      "ariaLabel": "Main navigation menu",
+      "heading": "Navigation",
+      "arrow": "",
+      "home": "Home",
+      "about": "About Us",
+      "pricing": "Pricing",
+      "terms": "Terms & Conditions",
+      "accessibility": "Accessibility"
+    },
+    "contact": {
+      "heading": "Contact Us",
+      "emailIcon": "Email",
+      "phoneIcon": "Phone",
+      "phone": "Phone"
+    },
+    "copyright": {
+      "jester": "Jester",
+      "developed": "Developed with ❤️ by",
+      "developer": "Omer Sheffer"
+    }
+  },
+  "aboutUs": {
+    "pageTitle": "Who Are We?",
+    "title": "Nice to meet you, we're Jester",
+    "description1": "Jester is an innovative platform that connects service providers at the beginning of their career with clients who are interested in receiving services for free. The idea was born from understanding how difficult it is for professionals at the beginning of their journey to gain experience and build a real portfolio.",
+    "description2": "Behind Jester stands a group of young entrepreneurs with experience in development, design, and marketing, who have themselves experienced the challenge of starting without recommendations or first clients. Out of this need, we created Jester.",
+    "features": {
+      "realClients": "Real Clients",
+      "honestFeedback": "Honest Feedback",
+      "personalCommunication": "Personal Communication",
+      "realJobs": "Real Jobs",
+      "experience": "Experience",
+      "immediateStart": "Immediate Start"
+    }
+  },
+  "pricingPage": {
+    "pageTitle": "Pricing",
+    "regularPlan": {
+      "title": "Regular Plan",
+      "price": "0.0",
+      "currency": "₪",
+      "pricingLabel": "Free"
+    },
+    "premiumPlan": {
+      "title": "More Plan",
+      "price": "49.90",
+      "currency": "₪",
+      "pricingLabel": "Monthly billing"
+    },
+    "features": {
+      "receiveService": {
+        "label": "Receive service from other users",
+        "unlimited": "Unlimited"
+      },
+      "clientLimit": {
+        "label": "Unlimited number of clients",
+        "limited": "Up to 3 per month",
+        "unlimited": "Unlimited"
+      },
+      "customerSupport": {
+        "label": "24/7 customer support",
+        "unlimited": "Unlimited"
+      },
+      "feedPromotion": {
+        "label": "Feed promotion",
+        "none": "None",
+        "included": "Included"
+      },
+      "preferredAccess": {
+        "label": "Preferred access to new clients",
+        "none": "None",
+        "included": "Included"
+      }
+    }
+  },
+  "termsAndConditionsPage": {
+    "title": "Terms and Conditions",
+    "sections": {
+      "intro": {
+        "title": "Introduction",
+        "content": "Welcome to the Jester application. The use of the application is subject to the terms of use detailed in this document. These terms define your rights and obligations, and should be read carefully before using the offered services. Using the application requires agreement to all the terms and limitations in these regulations. If you do not agree to one or more of the terms, you should refrain from using the service."
+      },
+      "serviceDefinition": {
+        "title": "1. Definition of \"The Service\"",
+        "content": "The services offered in the application include an online platform that connects beginning service providers with clients interested in receiving services in exchange for reviews. The platform is designed to help users build a real and professional portfolio while receiving genuine feedback from clients."
+      },
+      "usageRights": {
+        "title": "2. Usage Rights",
+        "content": "Users of the application are allowed to use the services offered in accordance with the instructions in these terms, but they are prohibited from using the services or content of the application for illegal purposes or for violating the copyrights of Jester or third parties."
+      },
+      "registration": {
+        "title": "3. Application Registration",
+        "content": "In order to use the application services, you must register and provide correct, accurate and complete personal details. Use of the application will only be granted to those who meet the terms of use and at Jester's discretion. Users who do not have the appropriate permission may be prevented from using the services."
+      },
+      "usageTerms": {
+        "title": "4. Terms of Use",
+        "basicServices": "Basic Services: Every user is entitled to use the basic services of the application, which include connecting with clients to receive reviews on completed work, and displaying a portfolio.",
+        "paidServices": "Paid Services: Users interested in enjoying additional services, such as customized support, feed promotion, or unlimited clients, will need to upgrade their subscription to a paid plan, according to the required terms."
+      },
+      "paymentAndSubscriptions": {
+        "title": "5. Payment and Subscriptions",
+        "content": "As part of the services offered, there is an option to purchase a paid subscription that provides access to additional services. All prices offered for paid services are published in the application, and the user will have to pay the price stated at the time of subscription purchase. Any changes in prices will be updated with advance notice."
+      },
+      "copyright": {
+        "title": "6. Copyright and Intellectual Property",
+        "content": "The user acknowledges that all content appearing in the application, including texts, images, graphics, designs and other content, is protected by copyright and cannot be reproduced, copied or marketed without our express consent. All rights to all content provided by Jester belong exclusively to us."
+      },
+      "privacy": {
+        "title": "7. Privacy and Data Security",
+        "content": "Jester is committed to protecting your privacy and the security of your information. All information you provide while using the application, including user details, payment details, and personal information, will be kept secure and will not be disclosed to third parties, unless required by law or for the purpose of providing the service."
+      },
+      "additionalTerms": {
+        "title": "8. Additional Terms",
+        "content": "Users are committed to maintaining the confidentiality of their access details to the application and to avoid transferring them to third parties. Users are also responsible for any action taken through their account."
+      },
+      "terminationOfUse": {
+        "title": "9. Termination of Use",
+        "content": "We reserve the right to terminate your access to the application at any time if you make illegal, offensive use or violate the terms of use. If use is terminated, all user details will be deleted."
+      },
+      "changesInTerms": {
+        "title": "10. Changes in Terms",
+        "content": "Jester reserves the right to change the terms of use from time to time. These changes will be published on the website or application, and will come into effect immediately upon publication. Users who continue to use the service after the changes are made will be considered to agree to them."
+      },
+      "limitationOfLiability": {
+        "title": "11. Limitation of Liability",
+        "content": "The services provided in the application are provided as they are (AS-IS), and we shall not be liable for any direct or indirect damage resulting from the use of services, including damage to information or loss of data. We do not guarantee that the services will operate without interruptions or errors."
+      },
+      "lawAndJurisdiction": {
+        "title": "12. Law and Jurisdiction",
+        "content": "The regulations and agreements between the parties shall be interpreted and executed according to Israeli law only. Any dispute that arises will be subject to the jurisdiction of the courts in Tel Aviv-Jaffa."
+      }
+    }
+  }
+}
