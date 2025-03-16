@@ -13,24 +13,20 @@ import Pricing from "./pages/Pricing";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import About from "./pages/About";
 import "./App.css";
-import "./services/i18n"; // This will be the i18n configuration file we'll create
+import "./services/i18n";
 
-// A component to handle language detection and routing
 function LanguageRouter() {
   const { i18n } = useTranslation();
-  const urlLang = window.location.pathname.split("/")[1];
+  const urlLang = window.location.pathname.split("/")[1]; // Extract lang from URL
 
   useEffect(() => {
-    // Check if the URL contains a valid language code
-    const isValidLanguage = ["en", "he"].includes(urlLang);
-
-    if (isValidLanguage && i18n.language !== urlLang) {
-      // Change language if URL language is different from current
+    const validLanguages = ["en", "he"];
+    if (validLanguages.includes(urlLang) && i18n.language !== urlLang) {
       i18n.changeLanguage(urlLang);
-    } else if (!isValidLanguage) {
-      // If no valid language in URL, use browser language or default to English
+    } else if (!validLanguages.includes(urlLang)) {
+      // Get browser language or default to Hebrew
       const browserLang = navigator.language.split("-")[0];
-      const defaultLang = ["en", "he"].includes(browserLang)
+      const defaultLang = validLanguages.includes(browserLang)
         ? browserLang
         : "he";
       i18n.changeLanguage(defaultLang);
@@ -39,49 +35,21 @@ function LanguageRouter() {
 
   return (
     <Routes>
-      {/* Redirect root to preferred language */}
-      <Route
-        path="omershefer.github.io/jester-example/"
-        element={
-          <Navigate
-            replace
-            to={`omershefer.github.io/jester-example/${i18n.language}`}
-          />
-        }
-      />
+      {/* Redirect root to language-based home */}
+      <Route path="/" element={<Navigate replace to={`/${i18n.language}`} />} />
 
-      {/* Language-specific routes */}
+      {/* Language routes */}
+      <Route path="/:lang" element={<HomePage />} />
       <Route
-        path="omershefer.github.io/jester-example/:lang"
-        element={<HomePage />}
-      />
-      <Route
-        path="omershefer.github.io/jester-example/:lang/accessibility"
+        path="/:lang/accessibility"
         element={<AccessibilityDecleration />}
       />
-      <Route
-        path="omershefer.github.io/jester-example/:lang/pricing"
-        element={<Pricing />}
-      />
-      <Route
-        path="omershefer.github.io/jester-example/:lang/terms"
-        element={<TermsAndConditions />}
-      />
-      <Route
-        path="omershefer.github.io/jester-example/:lang/about"
-        element={<About />}
-      />
+      <Route path="/:lang/pricing" element={<Pricing />} />
+      <Route path="/:lang/terms" element={<TermsAndConditions />} />
+      <Route path="/:lang/about" element={<About />} />
 
-      {/* Catch all route - redirect to home in current language */}
-      <Route
-        path="*"
-        element={
-          <Navigate
-            replace
-            to={`omershefer.github.io/jester-example/${i18n.language}`}
-          />
-        }
-      />
+      {/* Catch-all redirect */}
+      <Route path="*" element={<Navigate replace to={`/${i18n.language}`} />} />
     </Routes>
   );
 }
@@ -89,7 +57,7 @@ function LanguageRouter() {
 function App() {
   return (
     <AuthProvider>
-      <Router basename={import.meta.env.VITE_API_URL}>
+      <Router basename="/jester-example">
         <div
           className="w-full h-full"
           dir={useTranslation().i18n.language === "he" ? "rtl" : "ltr"}
