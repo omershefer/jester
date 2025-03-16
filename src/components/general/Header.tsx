@@ -28,9 +28,10 @@ export default function Header() {
   const menuRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   useEffect(() => {
-    setIsHebrew(params.lang === "he");
+    setIsHebrew(document.documentElement.dir === "rtl");
     setNavState(pathWithoutLang === "" ? "home" : pathWithoutLang);
-  }, []);
+    isHebrew ? changeLanguage("he") : changeLanguage("en");
+  }, [document.documentElement.dir]);
 
   useEffect(() => {
     document.documentElement.lang = params.lang || "he";
