@@ -12,7 +12,7 @@ i18n
   .use(initReactI18next)
   // Initialize i18next
   .init({
-    fallbackLng: "en",
+    fallbackLng: "he",
     supportedLngs: ["en", "he"],
     debug: process.env.NODE_ENV === "development",
 
