@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "secular";
+  src: url("../fonts/Secular_One/SecularOne-Regular.ttf");
+}
+
+@font-face {
+  font-family: "headline";
+  src: url("../fonts/LT_superior/OpenType-TT/LTSuperior-SemiBold.ttf");
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 50;
+}
+
+@theme {
+  --color-main: #eee;
+  --color-secondary: #121063;
+  --color-background: #3ab7bf;
+  --color-loginRed: #ef2a1c;
+}
+
+
+
+/* The parent container for the moving box */
+.parent {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-color: lightgray; /* Just for visibility */
+  overflow: hidden;
+}
+
+.moving-box-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 1s ease-in-out; /* Smooth transition */
+}
+
+.moving-box-top {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: all 1s ease-in-out; /* Smooth transition */
+}
+
+.move-up {
+  bottom: 90%; /* Moves bottom to fill the top */
+  transform: translateX(-100%);
+}
+
+.move-back-down {
+  top: 100%; /* Moves back to the bottom */
+  transform: translateX(0%);
+}
+
+input::placeholder {
+  font-family: 'font-secular', sans-serif;
+}
+
