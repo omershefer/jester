@@ -4,13 +4,13 @@ import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 // Import images
-import arrowLeftImg from "../../../public/images/arrow-left.png";
-import arrowRightImg from "../../../public/images/arrow-right.png";
-import instagramImg from "../../../public/images/instagram-2.png";
-import facebookImg from "../../../public/images/facebook-2.png";
-import whatsappImg from "../../../public/images/whatsapp.png";
-import phoneFlipImg from "../../../public/images/phone-flip.png";
-import mailLogoImg from "../../../public/images/mail-logo-2.png";
+import arrowLeftImg from "../../images/arrow-left.png";
+import arrowRightImg from "../../images/arrow-right.png";
+import instagramImg from "../../images/instagram-2.png";
+import facebookImg from "../../images/facebook-2.png";
+import whatsappImg from "../../images/whatsapp.png";
+import phoneFlipImg from "../../images/phone-flip.png";
+import mailLogoImg from "../../images/mail-logo-2.png";
 
 export default function Footer() {
   const [arrowImgSource, setArrowImgSource] = useState<string>("");

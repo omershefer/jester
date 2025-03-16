@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import "../../services/i18n";
 import { useEffect, useState, useRef } from "react";
 import HeaderBarButton from "../start_page/HeaderBarButton";
-import logo from "../../../public/images/logo-black.svg"
+import logo from "../../images/logo-black.svg"
 
 import { Drawer } from "./Drawer";
 

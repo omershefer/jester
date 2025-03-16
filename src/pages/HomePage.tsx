@@ -7,10 +7,10 @@ import ExpandableDivs from "../components/start_page/ExpandableDivs";
 import LoggedInFragment from "../components/start_page/LoggedInComponent"
 import ScrollExpandDiv from "../components/start_page/ScrollExpandDiv";
 import { changeLanguage } from "i18next";
-import yahavImage from "../../public/images/yahav-digital.jpg";
-import omerImage from "../../public/images/king-omer.jpeg";
-import userImage from "../../public/images/new-user.png";
-import deviceImage from "../../public/images/devices.png";
+import yahavImage from "../images/yahav-digital.jpg";
+import omerImage from "../images/king-omer.jpeg";
+import userImage from "../images/new-user.png";
+import deviceImage from "../images/devices.png";
 
 import Footer from "../components/general/Footer";
 import UserExample from "../components/start_page/UserExample";

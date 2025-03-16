@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
-import availableIcon from "../../../public/images/green-checkmark-icon.png";
-import unAvailableIcon from "../../../public/images/close-red-icon.png";
+import availableIcon from "../../images/green-checkmark-icon.png";
+import unAvailableIcon from "../../images/close-red-icon.png";
 
 interface infoRowProps {
   label: string;

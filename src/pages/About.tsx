@@ -3,12 +3,12 @@ import { useTranslation } from "react-i18next";
 import Footer from "../../../amen-yaavod/src/components/general/Footer";
 import Header from "../../../amen-yaavod/src/components/general/Header";
 import LabelAndIcon from "../components/aboutus/LabelAndIcon";
-import realClientsIcon from "../../public/images/group-icon.png";
-import realJobsIcon from "../../public/images/briefcase-icon.png";
-import honestFeedbackIcon from "../../public/images/decision-icon.png";
-import expierienceIcon from "../../public/images/weightlifting-icon.png";
-import communicationIcon from "../../public/images/business-communication-icon.png";
-import immidietStartIcon from "../../public/images/rocket-launch-icon.png";
+import realClientsIcon from "../images/group-icon.png";
+import realJobsIcon from "../images/briefcase-icon.png";
+import honestFeedbackIcon from "../images/decision-icon.png";
+import expierienceIcon from "../images/weightlifting-icon.png";
+import communicationIcon from "../images/business-communication-icon.png";
+import immidietStartIcon from "../images/rocket-launch-icon.png";
 
 export default function About() {
   const [isMobile, setIsMobile] = useState<boolean>(true);
