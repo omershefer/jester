@@ -61,7 +61,7 @@ function LanguageRouter() {
 function App() {
   return (
     <AuthProvider>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div
           className="w-full h-full"
           dir={useTranslation().i18n.language === "he" ? "rtl" : "ltr"}
