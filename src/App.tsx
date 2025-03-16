@@ -1,5 +1,5 @@
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
   Navigate,
@@ -17,7 +17,7 @@ import "./services/i18n";
 
 function LanguageRouter() {
   const { i18n } = useTranslation();
-  const urlLang = window.location.pathname.split("/")[1]; // Extract lang from URL
+  const urlLang = window.location.hash.split("/")[1]; // Extract lang from URL hash
 
   useEffect(() => {
     const validLanguages = ["en", "he"];
@@ -37,7 +37,6 @@ function LanguageRouter() {
     <Routes>
       {/* Redirect root to language-based home */}
       <Route path="/" element={<Navigate replace to={`/${i18n.language}`} />} />
-
       {/* Language routes */}
       <Route path="/:lang" element={<HomePage />} />
       <Route
@@ -47,7 +46,6 @@ function LanguageRouter() {
       <Route path="/:lang/pricing" element={<Pricing />} />
       <Route path="/:lang/terms" element={<TermsAndConditions />} />
       <Route path="/:lang/about" element={<About />} />
-
       {/* Catch-all redirect */}
       <Route path="*" element={<Navigate replace to={`/${i18n.language}`} />} />
     </Routes>
@@ -57,7 +55,7 @@ function LanguageRouter() {
 function App() {
   return (
     <AuthProvider>
-      <Router basename="/jester-example">
+      <Router>
         <div
           className="w-full h-full"
           dir={useTranslation().i18n.language === "he" ? "rtl" : "ltr"}
