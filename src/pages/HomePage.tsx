@@ -10,6 +10,7 @@ import { changeLanguage } from "i18next";
 import yahavImage from "../../public/images/yahav-digital.jpg";
 import omerImage from "../../public/images/king-omer.jpeg";
 import userImage from "../../public/images/new-user.png";
+import deviceImage from "../../public/images/devices.png";
 
 import Footer from "../components/general/Footer";
 import UserExample from "../components/start_page/UserExample";
@@ -67,7 +68,7 @@ const HomePage = () => {
         </main>
         {/* תמונה של מכשירים - מוסתרת בנייד */}
         <div className="hidden py-3 lg:flex lg:flex-1 lg:items-center lg:justify-center">
-          <img src="/images/devices.png" alt="" className="lg:w-[95%]" />
+          <img src={deviceImage} alt="" className="lg:w-[95%]" />
         </div>
       </div>
       {/* סקשן תחתון */}

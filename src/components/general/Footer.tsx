@@ -3,6 +3,15 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
+// Import images
+import arrowLeftImg from "../../../public/images/arrow-left.png";
+import arrowRightImg from "../../../public/images/arrow-right.png";
+import instagramImg from "../../../public/images/instagram-2.png";
+import facebookImg from "../../../public/images/facebook-2.png";
+import whatsappImg from "../../../public/images/whatsapp.png";
+import phoneFlipImg from "../../../public/images/phone-flip.png";
+import mailLogoImg from "../../../public/images/mail-logo-2.png";
+
 export default function Footer() {
   const [arrowImgSource, setArrowImgSource] = useState<string>("");
   const [dir, setDir] = useState<"rtl" | "ltr">("rtl");
@@ -13,13 +22,11 @@ export default function Footer() {
 
   useEffect(() => {
     document.documentElement.dir === "rtl"
-      ? setArrowImgSource("../images/arrow-left.png")
-      : setArrowImgSource("../images/arrow-right.png");
+      ? setArrowImgSource(arrowLeftImg)
+      : setArrowImgSource(arrowRightImg);
     setIsMobile(window.innerWidth <= 768);
     setDir(document.documentElement.dir as "rtl" | "ltr");
   }, [document.documentElement.dir]);
-
-
 
   return (
     <div>
@@ -31,7 +38,12 @@ export default function Footer() {
           } flex-col lg:p-3 font-secular text-white justify-around`}
         >
           <div className="flex flex-col flex-1">
-            <h4 className={`text-4xl lg:text-5xl ${dir === "rtl" ? "text-start" : "text-end"}`} dir="rtl">
+            <h4
+              className={`text-4xl lg:text-5xl ${
+                dir === "rtl" ? "text-start" : "text-end"
+              }`}
+              dir="rtl"
+            >
               <span>ג׳סטר</span>
               <span className="text-black">.</span>
               <span>Jester</span>
@@ -46,7 +58,7 @@ export default function Footer() {
                 className="w-14 min-h-14 p-1 bg-black rounded-full lg:hover:scale-110 lg:transition-all flex justify-center items-center focus:ring-2 focus:ring-blue-500"
               >
                 <img
-                  src="../images/instagram-2.png"
+                  src={instagramImg}
                   className="w-[24px] h-[24px]"
                   alt={t("footer.social.instagram")}
                 />
@@ -56,7 +68,7 @@ export default function Footer() {
                 className="w-14 min-h-14 p-1 bg-black rounded-full lg:hover:scale-110 lg:transition-all flex justify-center items-center focus:ring-2 focus:ring-blue-500"
               >
                 <img
-                  src="../images/facebook-2.png"
+                  src={facebookImg}
                   className="w-[24px] h-[24px]"
                   alt={t("footer.social.facebook")}
                 />
@@ -66,7 +78,7 @@ export default function Footer() {
                 className="w-14 min-h-14 p-1 bg-black rounded-full lg:hover:scale-110 lg:transition-all flex justify-center items-center focus:ring-2 focus:ring-blue-500"
               >
                 <img
-                  src="../images/whatsapp.png"
+                  src={whatsappImg}
                   className="w-[24px] h-[24px]"
                   alt={t("footer.social.whatsapp")}
                 />
@@ -76,7 +88,7 @@ export default function Footer() {
                 className="w-14 min-h-14 p-1 bg-black rounded-full lg:hover:scale-110 lg:transition-all flex justify-center items-center focus:ring-2 focus:ring-blue-500"
               >
                 <img
-                  src="../images/phone-flip.png"
+                  src={phoneFlipImg}
                   className="w-[24px] h-[24px]"
                   alt={t("footer.social.phone")}
                 />
@@ -232,7 +244,7 @@ export default function Footer() {
               tabIndex={0}
             >
               <img
-                src="../images/mail-logo-2.png"
+                src={mailLogoImg}
                 className="w-auto h-3 self-center mx-2"
                 alt={t("footer.contact.emailIcon")}
               />
@@ -243,7 +255,7 @@ export default function Footer() {
               tabIndex={0}
             >
               <img
-                src="../images/phone-flip.png"
+                src={phoneFlipImg}
                 className="w-auto h-4 mx-2 self-center"
                 alt={t("footer.contact.phoneIcon")}
               />

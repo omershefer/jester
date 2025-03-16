@@ -24,7 +24,7 @@ export default function HeaderBarButton({
         height || ""
       } ${
         active ? "bg-[#00000012]" : "bg-[#00000000]"
-      } font-primary font-medium hover:bg-[#00000012] active:backdrop-opacity-70 px-3 py-2 rounded-lg cursor-pointer`}
+      } font-secular font-medium hover:bg-[#00000012] active:backdrop-opacity-70 px-3 py-2 rounded-lg cursor-pointer`}
       onClick={onClick}
       onKeyDown={onKeyDown}
       tabIndex={0}

@@ -7,6 +7,8 @@ import { useTranslation } from "react-i18next";
 import "../../services/i18n";
 import { useEffect, useState, useRef } from "react";
 import HeaderBarButton from "../start_page/HeaderBarButton";
+import logo from "../../../public/images/logo-black.svg"
+
 import { Drawer } from "./Drawer";
 
 export default function Header() {
@@ -138,7 +140,7 @@ export default function Header() {
           </div>
         </div>
         <img
-          src="../images/logo-black.svg"
+          src={logo}
           className="w-[15vw] lg:w-[15vh]"
           alt={t("navigation.logoAlt")}
         />

@@ -2,10 +2,10 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import Backend from "i18next-http-backend";
+import enTranslations from "../locales/en/translation.json"; // Import English translations
+import heTranslations from "../locales/he/translation.json"; // Import Hebrew translations
 
 i18n
-  // Load translations from /public/locales
-  .use(Backend)
   // Detect user language
   .use(LanguageDetector)
   // Pass i18n instance to react-i18next
@@ -26,8 +26,13 @@ i18n
       caches: ["localStorage"],
     },
 
-    backend: {
-      loadPath: "/locales/{{lng}}/{{ns}}.json",
+    resources: {
+      en: {
+        translation: enTranslations, // Use the imported English JSON
+      },
+      he: {
+        translation: heTranslations, // Use the imported Hebrew JSON
+      },
     },
 
     react: {
