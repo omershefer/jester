@@ -32,7 +32,7 @@ function LanguageRouter() {
       const browserLang = navigator.language.split("-")[0];
       const defaultLang = ["en", "he"].includes(browserLang)
         ? browserLang
-        : "en";
+        : "he";
       i18n.changeLanguage(defaultLang);
     }
   }, [urlLang, i18n]);
@@ -40,20 +40,48 @@ function LanguageRouter() {
   return (
     <Routes>
       {/* Redirect root to preferred language */}
-      <Route path="/" element={<Navigate replace to={`/${i18n.language}`} />} />
+      <Route
+        path="omershefer.github.io/jester-example/"
+        element={
+          <Navigate
+            replace
+            to={`omershefer.github.io/jester-example/${i18n.language}`}
+          />
+        }
+      />
 
       {/* Language-specific routes */}
-      <Route path="/:lang" element={<HomePage />} />
       <Route
-        path="/:lang/accessibility"
+        path="omershefer.github.io/jester-example/:lang"
+        element={<HomePage />}
+      />
+      <Route
+        path="omershefer.github.io/jester-example/:lang/accessibility"
         element={<AccessibilityDecleration />}
       />
-      <Route path="/:lang/pricing" element={<Pricing />} />
-      <Route path="/:lang/terms" element={<TermsAndConditions />} />
-      <Route path="/:lang/about" element={<About />} />
+      <Route
+        path="omershefer.github.io/jester-example/:lang/pricing"
+        element={<Pricing />}
+      />
+      <Route
+        path="omershefer.github.io/jester-example/:lang/terms"
+        element={<TermsAndConditions />}
+      />
+      <Route
+        path="omershefer.github.io/jester-example/:lang/about"
+        element={<About />}
+      />
 
       {/* Catch all route - redirect to home in current language */}
-      <Route path="*" element={<Navigate replace to={`/${i18n.language}`} />} />
+      <Route
+        path="*"
+        element={
+          <Navigate
+            replace
+            to={`omershefer.github.io/jester-example/${i18n.language}`}
+          />
+        }
+      />
     </Routes>
   );
 }

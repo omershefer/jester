@@ -21,11 +21,6 @@ const HomePage = () => {
   const { lang } = useParams();
   const { currentUser } = useAuth();
   const navigate  = useNavigate();
-  
-  useEffect(() => {
-    navigate("/he");
-  });
-
 
   useEffect(() => {
     document.documentElement.dir = lang === "he" ? "rtl" : "ltr";

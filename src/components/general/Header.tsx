@@ -87,7 +87,11 @@ export default function Header() {
                         }}
                         tabIndex={0}
                         onKeyDown={(e) => handleKeyDown(e, index)}
-                        onClick={() => navigate(`/${params.lang}/${route}`)}
+                        onClick={() =>
+                          navigate(
+                            `omershefer.github.io/jester-example/${params.lang}/${route}`
+                          )
+                        }
                       >
                         <span>
                           {route === ""
