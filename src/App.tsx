@@ -61,7 +61,7 @@ function LanguageRouter() {
 function App() {
   return (
     <AuthProvider>
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router basename={import.meta.env.VITE_API_URL}>
         <div
           className="w-full h-full"
           dir={useTranslation().i18n.language === "he" ? "rtl" : "ltr"}
