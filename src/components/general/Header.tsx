@@ -33,6 +33,7 @@ export default function Header() {
     isHebrew ? changeLanguage("he") : changeLanguage("en");
   }, [document.documentElement.dir]);
 
+  
   useEffect(() => {
     document.documentElement.lang = params.lang || "he";
     document.documentElement.dir =

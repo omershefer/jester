@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Header from "../components/general/Header";
 import { useAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 import ExpandableDivs from "../components/start_page/ExpandableDivs";
 import LoggedInFragment from "../components/start_page/LoggedInComponent"
 import ScrollExpandDiv from "../components/start_page/ScrollExpandDiv";
@@ -19,6 +20,12 @@ const HomePage = () => {
   const { t } = useTranslation();
   const { lang } = useParams();
   const { currentUser } = useAuth();
+  const navigate  = useNavigate();
+  
+  useEffect(() => {
+    navigate("/he");
+  });
+
 
   useEffect(() => {
     document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
