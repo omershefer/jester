@@ -27,7 +27,7 @@ const GreetUser = () => {
     }
 
   return (
-    <div className="flex w-full min-h-full rounded-xl bg-gray-100">
+    <div className="flex w-full min-h-full rounded-xl bg-gray-200">
       <div className="text-start flex flex-col w-full border p-8 rounded-lg bg-transparent">
         <h1
           className={`${
@@ -40,7 +40,7 @@ const GreetUser = () => {
         <p
           className={`${
             isLoading &&
-            "animate-pulse bg-gray-100 w-[60%] border h-8 mr-auto ml-auto rounded-lg"
+            "animate-pulse bg-gray-200 w-[60%] border h-8 mr-auto ml-auto rounded-lg"
           } mt-4 text-xl text-gray-600 self-start`}
         >
           {!isLoading && t("loggedIn.greeting")}
@@ -48,12 +48,14 @@ const GreetUser = () => {
         <button
           className={`bg-black text-white rounded-xl p-3 mt-auto mr-auto ml-auto w-[30%] ${
             isLoading &&
-            "animate-pulse bg-gray-100 w-[20%] border h-6 mr-auto ml-auto rounded-lg"
+            "animate-pulse bg-gray-200 w-[20%] border h-6 mr-auto ml-auto rounded-lg"
           }`}
           onClick={() => {
             handleLogout();
           }}
+          tabIndex={0}
         >
+          
           {!isLoading && t("loggedIn.logout")}
         </button>
       </div>

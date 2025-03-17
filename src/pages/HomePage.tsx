@@ -1,10 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Header from "../components/general/Header";
 import { useAuth } from "../context/AuthContext";
 import ExpandableDivs from "../components/start_page/ExpandableDivs";
-import LoggedInFragment from "../components/start_page/LoggedInComponent"
+import LoggedInFragment from "../components/start_page/LoggedInComponent";
 import ScrollExpandDiv from "../components/start_page/ScrollExpandDiv";
 import { changeLanguage } from "i18next";
 import yahavImage from "../images/yahav-digital.jpg";
@@ -19,17 +19,16 @@ const HomePage = () => {
   const { t } = useTranslation();
   const { lang } = useParams();
   const { currentUser } = useAuth();
-
+  const [isMobile, setIsMobile] = useState<boolean>(true);
 
   useEffect(() => {
     document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
     changeLanguage(lang);
+    setIsMobile(window.innerWidth <= 768);
   }, [lang]);
 
-
-
   return (
-    <>
+    <div className="lg:flex lg:flex-1 lg:flex-col lg:overflow-y-auto">
       <div className="flex flex-1 bg-[#f8fafc] flex-col h-screen lg:grid lg:grid-cols-2 lg:grid-rows-[10%_1fr] lg:gap-x-2 lg:min-h-screen overflow-y-aut">
         {/* Header חלק עליון */}
         <div className="lg:col-span-2" aria-label="החלק העליון של הדף">
@@ -38,7 +37,7 @@ const HomePage = () => {
           </header>
         </div>
         {/* תוכן עיקרי */}
-        <main className="lg:col-span-1 lg:flex-1 lg:flex lg:flex-col lg:justify-center lg:mb-5">
+        <main className="lg:col-span-1 lg:flex-1 lg:flex lg:flex-col lg:justify-center">
           <div className="flex flex-1 flex-col gap-y-4 mt-4 lg:mt-6 lg:w-full lg:flex lg:flex-col lg:justify-center">
             {/* כותרת */}
             <h1
@@ -57,7 +56,7 @@ const HomePage = () => {
             <ScrollExpandDiv
               fadeDuration={400}
               expandDuration={700}
-              className="w-full h-full"
+              className="w-[100%]"
             >
               {currentUser ? (
                 <LoggedInFragment />
@@ -68,9 +67,11 @@ const HomePage = () => {
           </div>
         </main>
         {/* תמונה של מכשירים - מוסתרת בנייד */}
-        <div className="hidden py-3 lg:flex lg:flex-1 lg:items-center lg:justify-center">
-          <img src={deviceImage} alt="" className="lg:w-[95%]" />
-        </div>
+        {!isMobile && (
+          <div className="lg:flex lg:flex-1 lg:items-center lg:justify-center">
+            <img src={deviceImage} alt="" className="lg:w-[100%]" />
+          </div>
+        )}
       </div>
       {/* סקשן תחתון */}
       <div className="bg-slate-700 lg:flex lg:flex-1 lg:flex-col lg:w-full lg:h-[130vh]">
@@ -109,7 +110,7 @@ const HomePage = () => {
           <Footer />
         </div>
       </footer>
-    </>
+    </div>
   );
 };
 

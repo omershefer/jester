@@ -265,6 +265,52 @@ export default function Footer() {
         </div>
       </div>
 
+      {/** social links- shown here on mobile. */}
+      {isMobile && (
+        <div className="flex flex-1 flex-row gap-5 lg:mb-10 items-center justify-center mt-10">
+          <div
+            tabIndex={0}
+            className="w-14 min-h-14 p-1 bg-black rounded-full lg:hover:scale-110 lg:transition-all flex justify-center items-center focus:ring-2 focus:ring-blue-500"
+          >
+            <img
+              src={instagramImg}
+              className="w-[24px] h-[24px]"
+              alt={t("footer.social.instagram")}
+            />
+          </div>
+          <div
+            tabIndex={0}
+            className="w-14 min-h-14 p-1 bg-black rounded-full lg:hover:scale-110 lg:transition-all flex justify-center items-center focus:ring-2 focus:ring-blue-500"
+          >
+            <img
+              src={facebookImg}
+              className="w-[24px] h-[24px]"
+              alt={t("footer.social.facebook")}
+            />
+          </div>
+          <div
+            tabIndex={0}
+            className="w-14 min-h-14 p-1 bg-black rounded-full lg:hover:scale-110 lg:transition-all flex justify-center items-center focus:ring-2 focus:ring-blue-500"
+          >
+            <img
+              src={whatsappImg}
+              className="w-[24px] h-[24px]"
+              alt={t("footer.social.whatsapp")}
+            />
+          </div>
+          <div
+            tabIndex={0}
+            className="w-14 min-h-14 p-1 bg-black rounded-full lg:hover:scale-110 lg:transition-all flex justify-center items-center focus:ring-2 focus:ring-blue-500"
+          >
+            <img
+              src={phoneFlipImg}
+              className="w-[24px] h-[24px]"
+              alt={t("footer.social.phone")}
+            />
+          </div>
+        </div>
+      )}
+
       {/** Developer credit */}
       <div className="bg-inherit w-full text-center mt-8 pb-4 text-white text-sm font-secular">
         <p>

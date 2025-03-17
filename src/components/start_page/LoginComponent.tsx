@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useAuth } from "../../context/AuthContext";
@@ -13,9 +13,14 @@ export default function LoginComponent({ isExpanded }: loginComponentProps) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [lang, setLang] = useState<"he" | "en">("he");
   const navigate = useNavigate();
   const { t } = useTranslation();
   const { login } = useAuth();
+
+  useEffect(() => {
+    setLang(document.documentElement.dir === "rtl" ? "he" : "en");
+  }, [document.documentElement.dir])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,7 +29,7 @@ export default function LoginComponent({ isExpanded }: loginComponentProps) {
     // Try to login using the handleLogin from the hook
     const success = await login(email, password);
     if (success) {
-      navigate("/dashboard"); // Redirect to dashboard after successful login
+      navigate(`/${lang}`); // Redirect to dashboard after successful login
     } else {
       setError("Invalid credentials. Please try again.");
     }
@@ -91,7 +96,7 @@ export default function LoginComponent({ isExpanded }: loginComponentProps) {
             </div>
           </fieldset>
         </form>
-        {error && (
+        {(
           <p
             id="error-message"
             className="text-red-500 text-sm mt-2"
