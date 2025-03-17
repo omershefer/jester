@@ -16,7 +16,12 @@ export default function About() {
 
   useEffect(() => {
     setIsMobile(window.innerWidth <= 768);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }, []);
+
 
   return (
     <div className="flex flex-1 bg-[#f8fafc] flex-col overflow-y-scroll">

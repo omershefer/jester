@@ -21,6 +21,13 @@ const HomePage = () => {
   const { currentUser } = useAuth();
   const [isMobile, setIsMobile] = useState<boolean>(true);
 
+useEffect(() => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}, []);
+
   useEffect(() => {
     document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
     changeLanguage(lang);

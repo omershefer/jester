@@ -2,10 +2,17 @@ import { useTranslation } from "react-i18next";
 import Footer from "../../../amen-yaavod/src/components/general/Footer";
 import Header from "../../../amen-yaavod/src/components/general/Header";
 import InfoRow from "../components/pricing/InfoRow";
+import { useEffect } from "react";
 
 export default function Pricing() {
   const { t } = useTranslation();
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
   return (
     <div className="bg-[#f8fafc] flex flex-1 flex-col overflow-y-scroll">

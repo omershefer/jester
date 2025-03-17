@@ -1,13 +1,9 @@
-import {
-  useParams,
-  useNavigate,
-  useLocation,
-} from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "../../services/i18n";
 import { useEffect, useState, useRef } from "react";
 import HeaderBarButton from "../start_page/HeaderBarButton";
-import logo from "../../images/logo-black.svg"
+import logo from "../../images/logo-black.svg";
 
 import { Drawer } from "./Drawer";
 
@@ -33,7 +29,6 @@ export default function Header() {
     isHebrew ? changeLanguage("he") : changeLanguage("en");
   }, [document.documentElement.dir]);
 
-  
   useEffect(() => {
     document.documentElement.lang = params.lang || "he";
     document.documentElement.dir =
@@ -87,11 +82,7 @@ export default function Header() {
                         }}
                         tabIndex={0}
                         onKeyDown={(e) => handleKeyDown(e, index)}
-                        onClick={() =>
-                          navigate(
-                            `omershefer.github.io/jester-example/${params.lang}/${route}`
-                          )
-                        }
+                        onClick={() => navigate(`/${params.lang}/${route}`)}
                       >
                         <span>
                           {route === ""

@@ -117,10 +117,6 @@ export default function Footer() {
                     onClick={(e) => {
                       e.preventDefault();
                       navigate(`/${params.lang}`);
-                      window.scrollTo({
-                        top: 0,
-                        behavior: "smooth",
-                      });
                     }}
                     className="flex flex-row text-white text-xl lg:text-base font-secular underline w-fit lg:hover:text-green-300 active:opacity-75 focus:ring-2 focus:ring-blue-500"
                     tabIndex={0}
@@ -141,10 +137,6 @@ export default function Footer() {
                     onClick={(e) => {
                       e.preventDefault();
                       navigate(`/${params.lang}/about`);
-                      window.scrollTo({
-                        top: 1,
-                        behavior: "smooth",
-                      });
                     }}
                     className="flex flex-row text-white text-xl lg:text-base font-secular underline w-fit lg:hover:text-green-300 active:opacity-75 focus:ring-2 focus:ring-blue-500"
                     tabIndex={0}
@@ -161,13 +153,10 @@ export default function Footer() {
                 <li>
                   <a
                     href={`/${params.lang}/pricing`}
-                    onClick={(e) => {
+                    onClick={async (e) => {
                       e.preventDefault();
                       navigate(`/${params.lang}/pricing`);
-                      window.scrollTo({
-                        top: 1,
-                        behavior: "smooth",
-                      });
+                      
                     }}
                     className="flex flex-row text-white text-xl lg:text-base font-secular underline w-fit lg:hover:text-green-300 active:opacity-75 focus:ring-2 focus:ring-blue-500"
                     tabIndex={0}
@@ -187,10 +176,7 @@ export default function Footer() {
                     onClick={(e) => {
                       e.preventDefault();
                       navigate(`/${params.lang}/terms`);
-                      window.scrollTo({
-                        top: 0,
-                        behavior: "smooth",
-                      });
+                      
                     }}
                     className="flex flex-row text-white text-xl lg:text-base font-secular underline w-fit lg:hover:text-green-300 active:opacity-75 focus:ring-2 focus:ring-blue-500"
                     tabIndex={0}
@@ -210,10 +196,7 @@ export default function Footer() {
                     onClick={(e) => {
                       e.preventDefault();
                       navigate(`/${params.lang}/accessibility`);
-                      window.scrollTo({
-                        top: 1,
-                        behavior: "smooth",
-                      });
+                      
                     }}
                     className="flex flex-row text-white text-xl lg:text-base font-secular underline w-fit lg:hover:text-green-300 active:opacity-75 focus:ring-2 focus:ring-blue-500"
                     tabIndex={0}
